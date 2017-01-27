@@ -48,3 +48,10 @@ def sign_up_with_same_address
   sign_up
   sign_up
 end
+
+def sign_in
+  visit '/sessions/new'
+  fill_in :email,    with: 'alice@example.com'
+  fill_in :password, with: 'oranges!'
+  click_button 'Sign in'
+end
